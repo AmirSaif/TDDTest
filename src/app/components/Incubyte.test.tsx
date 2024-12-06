@@ -54,4 +54,13 @@ describe('Test the Incubyte function', () => {
     test('Verify sum of negative and positive numbers case', () => {
         expect(()=>Incubyte('-1,4,-2,5,-3')).toThrow('Negative numbers are not allowed: -1,-2,-3');
     });
+
+    test('Verify result if string is empty', () => {
+        expect(Incubyte('')).toBe(0);
+    });
+
+    test('Verify result if string has only 1 number', () => {
+        expect(Incubyte('1')).toBe(1);
+    });
+        
 });
